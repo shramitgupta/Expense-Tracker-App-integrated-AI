@@ -69,7 +69,7 @@ class ExpenseIQApp extends StatelessWidget {
           );
 
           return MaterialApp(
-            title: 'ExpenseIQ AI',
+            title: 'AI Expense tracker APP',
             debugShowCheckedModeBanner: false,
             theme: AppTheme.lightTheme,
             darkTheme: AppTheme.darkTheme,
