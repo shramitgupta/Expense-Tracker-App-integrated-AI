@@ -3,84 +3,84 @@ import 'package:flutter/material.dart';
 class AppColors {
   AppColors._();
 
-  // ─── Light Theme Colors ───
-  static const Color primaryLight = Color(0xFF6C5CE7);
-  static const Color primaryVariantLight = Color(0xFF5A4BD1);
-  static const Color secondaryLight = Color(0xFF00CEC9);
-  static const Color surfaceLight = Color(0xFFF8F9FE);
+  // ─── Light Theme Colors (Clean & Modern Slate) ───
+  static const Color primaryLight = Color(0xFF4F46E5); // Indigo 600
+  static const Color primaryVariantLight = Color(0xFF4338CA); // Indigo 700
+  static const Color secondaryLight = Color(0xFF0EA5E9); // Sky 500
+  static const Color surfaceLight = Color(0xFFF8FAFC); // Slate 50
   static const Color backgroundLight = Color(0xFFFFFFFF);
   static const Color cardLight = Color(0xFFFFFFFF);
-  static const Color textPrimaryLight = Color(0xFF2D3436);
-  static const Color textSecondaryLight = Color(0xFF636E72);
-  static const Color dividerLight = Color(0xFFE0E0E0);
-  static const Color errorLight = Color(0xFFE17055);
+  static const Color textPrimaryLight = Color(0xFF0F172A); // Slate 900
+  static const Color textSecondaryLight = Color(0xFF64748B); // Slate 500
+  static const Color dividerLight = Color(0xFFF1F5F9); // Slate 100
+  static const Color errorLight = Color(0xFFEF4444); // Red 500
 
-  // ─── Dark Theme Colors ───
-  static const Color primaryDark = Color(0xFFA29BFE);
-  static const Color primaryVariantDark = Color(0xFF8B80F9);
-  static const Color secondaryDark = Color(0xFF55EFC4);
-  static const Color surfaceDark = Color(0xFF1E1E2E);
-  static const Color backgroundDark = Color(0xFF13131A);
-  static const Color cardDark = Color(0xFF252537);
-  static const Color textPrimaryDark = Color(0xFFF5F5F5);
-  static const Color textSecondaryDark = Color(0xFFB2BEC3);
-  static const Color dividerDark = Color(0xFF3D3D50);
-  static const Color errorDark = Color(0xFFFF7675);
+  // ─── Dark Theme Colors (Deep & Premium Obsidian) ───
+  static const Color primaryDark = Color(0xFF818CF8); // Indigo 400
+  static const Color primaryVariantDark = Color(0xFF6366F1); // Indigo 500
+  static const Color secondaryDark = Color(0xFF38BDF8); // Sky 400
+  static const Color surfaceDark = Color(0xFF0B0F19); // Deep Blue-Black 950
+  static const Color backgroundDark = Color(0xFF030712); // Pure Obsidian 950
+  static const Color cardDark = Color(0xFF111827); // Zinc/Slate 900
+  static const Color textPrimaryDark = Color(0xFFF9FAFB); // Gray 50
+  static const Color textSecondaryDark = Color(0xFF9CA3AF); // Gray 400
+  static const Color dividerDark = Color(0xFF1F2937); // Slate 800
+  static const Color errorDark = Color(0xFFF87171); // Red 400
 
-  // ─── Category Colors ───
-  static const Color foodColor = Color(0xFFFF6B6B);
-  static const Color shoppingColor = Color(0xFFFECA57);
-  static const Color travelColor = Color(0xFF48DBFB);
-  static const Color utilitiesColor = Color(0xFFFF9FF3);
-  static const Color entertainmentColor = Color(0xFFF368E0);
-  static const Color healthColor = Color(0xFF26DE81);
-  static const Color educationColor = Color(0xFF4ECDC4);
-  static const Color subscriptionColor = Color(0xFFFF6348);
-  static const Color othersColor = Color(0xFF576574);
+  // ─── Category Colors (Harmonious & Softer Shades) ───
+  static const Color foodColor = Color(0xFFF87171); // Soft Coral Red
+  static const Color shoppingColor = Color(0xFFFB923C); // Soft Peach Orange
+  static const Color travelColor = Color(0xFF60A5FA); // Soft Sky Blue
+  static const Color utilitiesColor = Color(0xFF2DD4BF); // Soft Mint Teal
+  static const Color entertainmentColor = Color(0xFFC084FC); // Soft Lilac Purple
+  static const Color healthColor = Color(0xFF34D399); // Soft Emerald Green
+  static const Color educationColor = Color(0xFF818CF8); // Soft Indigo Blue
+  static const Color subscriptionColor = Color(0xFFF43F5E); // Soft Rose Pink
+  static const Color othersColor = Color(0xFF94A3B8); // Soft Muted Slate
 
-  // ─── Gradient Colors ───
+  // ─── Gradient Colors (Vibrant but Balanced Glows) ───
   static const List<Color> primaryGradient = [
-    Color(0xFF6C5CE7),
-    Color(0xFFA29BFE),
+    Color(0xFF4F46E5),
+    Color(0xFF818CF8),
   ];
 
   static const List<Color> secondaryGradient = [
-    Color(0xFF00CEC9),
-    Color(0xFF55EFC4),
+    Color(0xFF0EA5E9),
+    Color(0xFF34D399),
   ];
 
   static const List<Color> accentGradient = [
-    Color(0xFFE17055),
-    Color(0xFFFAB1A0),
+    Color(0xFFF43F5E),
+    Color(0xFFFB923C),
   ];
 
   static const List<Color> warningGradient = [
-    Color(0xFFFFA502),
-    Color(0xFFFFD93D),
+    Color(0xFFD97706),
+    Color(0xFFFBBF24),
   ];
 
   static const List<Color> successGradient = [
-    Color(0xFF26DE81),
-    Color(0xFF20BF6B),
+    Color(0xFF059669),
+    Color(0xFF34D399),
   ];
 
   static const List<Color> healthGradient = [
-    Color(0xFF6C5CE7),
-    Color(0xFF00CEC9),
+    Color(0xFF6366F1),
+    Color(0xFF0EA5E9),
   ];
 
   static const List<Color> coachGradient = [
-    Color(0xFFE66767),
-    Color(0xFFF39C12),
+    Color(0xFFE11D48),
+    Color(0xFFFB923C),
   ];
 
-  // ─── Health Score Colors ───
+  // ─── Health Score Helper ───
   static Color getHealthColor(double score) {
-    if (score >= 80) return const Color(0xFF26DE81);
-    if (score >= 60) return const Color(0xFF4ECDC4);
-    if (score >= 40) return const Color(0xFFFFA502);
-    if (score >= 20) return const Color(0xFFE17055);
-    return const Color(0xFFFF6B6B);
+    if (score >= 80) return const Color(0xFF34D399);
+    if (score >= 60) return const Color(0xFF2DD4BF);
+    if (score >= 40) return const Color(0xFFFB923C);
+    if (score >= 20) return const Color(0xFFF87171);
+    return const Color(0xFFF43F5E);
   }
 
   static String getHealthLabel(double score) {
@@ -91,7 +91,7 @@ class AppColors {
     return 'Critical';
   }
 
-  // ─── Payment Method ───
+  // ─── Payment Method Helper ───
   static IconData getPaymentIcon(String method) {
     switch (method.toLowerCase()) {
       case 'upi':
@@ -139,11 +139,11 @@ class AppColors {
       case 'shopping':
         return Icons.shopping_bag_rounded;
       case 'travel':
-        return Icons.flight_rounded;
+        return Icons.directions_car_rounded;
       case 'utilities':
         return Icons.bolt_rounded;
       case 'entertainment':
-        return Icons.movie_rounded;
+        return Icons.local_play_rounded;
       case 'health':
         return Icons.favorite_rounded;
       case 'education':

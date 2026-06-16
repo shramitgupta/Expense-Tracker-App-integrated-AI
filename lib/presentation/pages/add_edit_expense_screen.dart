@@ -267,8 +267,11 @@ class _AddEditExpenseScreenState extends State<AddEditExpenseScreen> {
           decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: isDark
-                  ? [const Color(0xFF2A2A4A), const Color(0xFF1E1E3A)]
-                  : [const Color(0xFFF0EDFF), const Color(0xFFE8E4FF)],
+                  ? [theme.colorScheme.surface, theme.colorScheme.surface.withValues(alpha: 0.7)]
+                  : [
+                      theme.colorScheme.primary.withValues(alpha: 0.06),
+                      theme.colorScheme.primary.withValues(alpha: 0.02),
+                    ],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
             ),

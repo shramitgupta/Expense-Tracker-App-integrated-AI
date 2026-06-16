@@ -153,9 +153,9 @@ class _GaugePainter extends CustomPainter {
         startAngle: startAngle,
         endAngle: startAngle + sweepAngle,
         colors: [
-          const Color(0xFFFF6B6B),
-          const Color(0xFFFFA502),
-          const Color(0xFF26DE81),
+          AppColors.foodColor,
+          AppColors.shoppingColor,
+          AppColors.healthColor,
         ],
         stops: const [0.0, 0.5, 1.0],
       ).createShader(Rect.fromCircle(center: center, radius: radius))

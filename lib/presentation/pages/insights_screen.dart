@@ -34,8 +34,11 @@ class InsightsScreen extends StatelessWidget {
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
                       colors: isDark
-                          ? [const Color(0xFF1E2A3A), const Color(0xFF162030)]
-                          : [const Color(0xFFEDF5FF), const Color(0xFFE0ECFF)],
+                          ? [theme.colorScheme.surface, theme.colorScheme.surface.withValues(alpha: 0.7)]
+                          : [
+                              theme.colorScheme.primary.withValues(alpha: 0.06),
+                              theme.colorScheme.primary.withValues(alpha: 0.02),
+                            ],
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
                     ),

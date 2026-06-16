@@ -1,6 +1,7 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import '../../core/constants/color_constants.dart';
 
 class LineChartWidget extends StatelessWidget {
   final Map<DateTime, double> data;
@@ -13,7 +14,7 @@ class LineChartWidget extends StatelessWidget {
     super.key,
     required this.data,
     this.title = '',
-    this.color = const Color(0xFF6C5CE7),
+    this.color = AppColors.primaryLight,
     this.showDots = true,
     this.showLabels = true,
   });
@@ -91,14 +92,14 @@ class LineChartWidget extends StatelessWidget {
               _StatChip(
                 label: 'Avg/Day',
                 value: '₹${_fmt(avgPerDay)}',
-                color: const Color(0xFF00CEC9),
+                color: AppColors.secondaryLight,
                 isDark: isDark,
               ),
               const SizedBox(width: 6),
               _StatChip(
                 label: 'Peak',
                 value: '₹${_fmt(maxVal)}',
-                color: const Color(0xFFE17055),
+                color: AppColors.errorLight,
                 isDark: isDark,
               ),
             ],
@@ -234,7 +235,7 @@ class LineChartWidget extends StatelessWidget {
                     getDotPainter: (spot, percent, barData, index) {
                       return FlDotCirclePainter(
                         radius: 3.5,
-                        color: isDark ? const Color(0xFF252537) : Colors.white,
+                        color: isDark ? AppColors.cardDark : Colors.white,
                         strokeWidth: 2.5,
                         strokeColor: color,
                       );

@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'core/theme/app_theme.dart';
+import 'core/constants/color_constants.dart';
 import 'injection_container.dart';
 import 'presentation/blocs/coach/coach_bloc.dart';
 import 'presentation/blocs/expense/expense_bloc.dart';
@@ -59,7 +60,7 @@ class ExpenseIQApp extends StatelessWidget {
             isDark
                 ? SystemUiOverlayStyle.light.copyWith(
                     statusBarColor: Colors.transparent,
-                    systemNavigationBarColor: const Color(0xFF1A1A2E),
+                    systemNavigationBarColor: AppColors.surfaceDark,
                   )
                 : SystemUiOverlayStyle.dark.copyWith(
                     statusBarColor: Colors.transparent,
