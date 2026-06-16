@@ -26,6 +26,7 @@ Future<void> initDependencies() async {
   Hive.registerAdapter(ExpenseModelAdapter());
   final expenseBox =
       await Hive.openBox<ExpenseModel>('expenses');
+  final settingsBox = await Hive.openBox('settings');
 
   // ─── Services ───
   sl.registerLazySingleton<GeminiService>(() => GeminiService());
@@ -71,5 +72,5 @@ Future<void> initDependencies() async {
   );
 
   // ─── Theme ───
-  sl.registerLazySingleton(() => ThemeCubit());
+  sl.registerLazySingleton(() => ThemeCubit(settingsBox));
 }
